@@ -1,0 +1,6 @@
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\obj\Debug\CinemaSystem.csprojAssemblyReference.cache
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\bin\Debug\CinemaSystem.exe.config
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\bin\Debug\CinemaSystem.exe
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\bin\Debug\CinemaSystem.pdb
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\obj\Debug\CinemaSystem.exe
+D:\University\OOP\Final Project\CinemaSystem\CinemaSystem\obj\Debug\CinemaSystem.pdb
