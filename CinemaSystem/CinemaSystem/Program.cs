@@ -16,8 +16,8 @@ namespace CinemaSystem
             Theater theaterOne = new Theater("Orchid", theaterOneTime);
             Theater theaterTwo = new Theater("Rose", theaterTwoTime);
 
-            Movie movieOne = new Movie("Avengers Endgame", 3, "Superheroes in action", new string[] { "Chris Hemsworth" } , 1);
-            Movie movieTwo = new Movie("Birdbox", 1, "Don't make a sound", new string[] { "Sandra Bullock" }, 2);
+            Movie movieOne = new Movie("Avengers Endgame", 3, "Superheroes in action",  "Chris Hemsworth"  , 1);
+            Movie movieTwo = new Movie("Birdbox", 1, "Don't make a sound",  "Sandra Bullock" , 2);
 
             theaterOne.AddMovie(movieOne);
             theaterTwo.AddMovie(movieTwo);
@@ -87,7 +87,21 @@ namespace CinemaSystem
                         CelebrityFan celebrityFan = new CelebrityFan(customerName, favorite);
                         celebrityFan.DisplayBoard = displayBoardOne;
                         celebrityFan.BuyTickets();
-                    }
+                    } 
+                    //else if (custChoice == 5)
+                    //{
+                    //    Console.WriteLine("Insert your favorite genre: ");
+                    //    Console.WriteLine("1. Horror");
+                    //    Console.WriteLine("2. Romance");
+                    //    Console.WriteLine("3. Action");
+                    //    Console.WriteLine("4. Animation");
+
+                    //    int genreChoice = Convert.ToInt32(Console.ReadLine());
+                    //    if(genreChoice == 1)
+                    //    {
+                    //        Customer c = new CategoryFans(customerName, genreChoice);
+                    //    }
+                    //}
                 }
                 Console.ReadLine();
             }

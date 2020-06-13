@@ -14,7 +14,7 @@ namespace CinemaSystem
             Random random = new Random();
             _indecisiveMeter = random.Next(1, 10);
         }
-        public override void BuyTickets()
+        public override string BuyTickets()
         {
             //Getting the non booked seats
             List<Seat> tempSeats = new List<Seat>();
@@ -30,7 +30,7 @@ namespace CinemaSystem
 
 
             //Chooses the theater
-            Console.WriteLine(GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetName + Environment.NewLine);
+            _returnString += GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetName + Environment.NewLine;
             //Get Theater Seats
             tempSeats = _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetSeat;
 
@@ -52,8 +52,8 @@ namespace CinemaSystem
             //Indecisiveness
             if (_indecisiveMeter < 5)
             {
-                Console.WriteLine(GetName + " changed his/her/their mind. " + GetName + " decided to go home ");
-                return;
+                _returnString += GetName + " changed his/her/their mind. " + GetName + " decided to go home ";
+                return _returnString;
             }
 
             for (int i = 0; i < indexSeat.Count; i++)
@@ -81,12 +81,15 @@ namespace CinemaSystem
                 //Calculate total price
                 _receipt.CalculateTotalPrice(boughtSeats);
                 //Get the full description of the receipt
-                Console.WriteLine(_receipt.GetFullDescription());
+                _returnString += _receipt.GetFullDescription();
+
+                _displayBoard.GetReceipts.Add(_receipt);
             }
             else
             {
-                Console.WriteLine(GetName + " didn't like any of the seats, so " + GetName + " went home.");
+                _returnString += GetName + " didn't like any of the seats, so " + GetName + " went home.";
             }
+            return _returnString;
         }
     }
 }

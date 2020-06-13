@@ -35,25 +35,28 @@ namespace CinemaSystem
             }
         }
 
-        public void ShowSeats()
+        public string ShowSeats()
         {
-            Console.WriteLine(GetName + " Theater Seat Chart"+ Environment.NewLine);
+            string theaterSeats = "";
+            theaterSeats += GetName + " Theater Seat Chart"+ Environment.NewLine;
             for (int i = 1; i <= _seats.Count; i++)
             {
                 if (!_seats.ElementAt(i - 1).GetStatus)
                 {
-                    Console.Write("{0}{1} ", _seats.ElementAt(i - 1).GetRow, _seats.ElementAt(i - 1).GetColumn);
+                    theaterSeats += _seats.ElementAt(i - 1).GetRow.ToString() + _seats.ElementAt(i - 1).GetColumn + " ";
                 } else
                 {
-                    Console.Write("XX ");
+                    theaterSeats += "XX ";
                 }
                 
                 
                 if(i % 4 == 0)
                 {
-                    Console.Write(Environment.NewLine);
+                    theaterSeats += " - " + _seats.ElementAt(i-1).GetClass;
+                    theaterSeats += Environment.NewLine;
                 }
             }
+            return theaterSeats;
         }
         public void BookSeats(Seat seat)
         {
@@ -74,7 +77,7 @@ namespace CinemaSystem
                 return _time;
             }
         }
-        public bool IsFull
+        public string IsFull
         {
             get
             {
@@ -82,10 +85,10 @@ namespace CinemaSystem
                 {
                     if (!s.GetStatus)
                     {
-                        return false;
+                        return "Available";
                     }
                 }
-                return true;
+                return "Full";
             }
         }
 

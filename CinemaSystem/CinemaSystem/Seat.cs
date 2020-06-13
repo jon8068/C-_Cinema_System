@@ -86,6 +86,15 @@ namespace CinemaSystem
                 return _price;
             }
         }
+
+        public string GetClass
+        {
+
+            get
+            {
+                return _seatClass.ToString();
+            }
+        }
         
     }
 }

@@ -11,6 +11,7 @@ namespace CinemaSystem
         protected Receipt _receipt;
         protected DisplayBoard _displayBoard;
         protected List<Theater> _theaterList;
+        protected string _returnString;
         
         public Customer(string name) : base(name)
         {
@@ -18,7 +19,7 @@ namespace CinemaSystem
             _theaterList = new List<Theater>();
             _theaterList = _displayBoard.GetTheaters;
         }
-        public abstract void BuyTickets();
+        public abstract string BuyTickets();
         
         public Receipt GetReceipt
         {
@@ -39,5 +40,7 @@ namespace CinemaSystem
                 _displayBoard = value;
             }
         }
+
+        //public abstract void Add(Customer customer);
     }
 }

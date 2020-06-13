@@ -12,6 +12,7 @@ namespace CinemaSystem
         private List<Seat> _seats;
         private Theater _theater;
         private int _totalPrice;
+        private string _seatNames;
 
         public Receipt(Customer c, Theater t, List<Seat> s)
         {
@@ -32,17 +33,15 @@ namespace CinemaSystem
 
         public string GetFullDescription()
         {
-            string seatNames = "";
-            
             foreach(Seat s in _seats)
             {
                 if (s.Equals(_seats.ElementAt(_seats.Count - 1)))
                 {
-                    seatNames += s.GetRow.ToString() + s.GetColumn + ".";
+                    _seatNames += s.GetRow.ToString() + s.GetColumn + ".";
                 }
                 else
                 {
-                    seatNames += s.GetRow.ToString() + s.GetColumn + ", ";
+                    _seatNames += s.GetRow.ToString() + s.GetColumn + ", ";
                 }
             }
 
@@ -51,8 +50,45 @@ namespace CinemaSystem
             "Name: " + _customer.GetName + Environment.NewLine +
             "Movie: " + _theater.GetMovie.GetName + Environment.NewLine +
             "Theater: " + _theater.GetName + Environment.NewLine +
-            "Seats Booked: " + seatNames + Environment.NewLine +
+            "Seats Booked: " + _seatNames + Environment.NewLine +
             "Total Price: $" + _totalPrice;
+        }
+
+        public string GetCustName
+        {
+            get
+            {
+                return _customer.GetName;
+            }
+        }
+        public Theater GetTheater
+        {
+            get
+            {
+                return _theater;
+            }
+        }
+        public Movie GetMovie
+        {
+            get
+            {
+                return _theater.GetMovie;
+            }
+        }
+        public string GetSeatName
+        {
+            get
+            {
+                return _seatNames;
+            }
+        }
+
+        public int GetTotalPrice
+        {
+            get
+            {
+                return _totalPrice;
+            }
         }
 
     }

@@ -20,9 +20,9 @@ namespace CinemaSystem
 
         private MovieCategory _category;
         private string _description;
-        private string[] _starring;
+        private string _starring;
         
-        public Movie(string name, int category, string description, string[] starring, int type) : base(name)
+        public Movie(string name, int category, string description, string starring, int type) : base(name)
         {
             if(category == 1)
             {
@@ -43,7 +43,7 @@ namespace CinemaSystem
 
         }
 
-        public string[] GetStarring
+        public string GetStarring
         {
             get
             {

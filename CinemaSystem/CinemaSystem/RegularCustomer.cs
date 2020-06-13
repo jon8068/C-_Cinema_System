@@ -13,7 +13,7 @@ namespace CinemaSystem
         {
             
         }
-        public override void BuyTickets()
+        public override string BuyTickets()
         {
             //Getting the non booked seats
             List<Seat> tempSeats = new List<Seat>();
@@ -29,7 +29,7 @@ namespace CinemaSystem
             
 
             //Chooses the theater
-            Console.WriteLine(GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber-1).GetName + Environment.NewLine);
+            _returnString += GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber-1).GetName + Environment.NewLine;
             //Get Theater Seats
             tempSeats = _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetSeat;
 
@@ -58,7 +58,7 @@ namespace CinemaSystem
                 else
                 {
                     _displayBoard.GetTheaters.ElementAt(randomNumber - 1).BookSeats((tempSeats.ElementAt(indexSeat.ElementAt(i) - 1)));
-                    Console.WriteLine(GetName + " chooses seat number " + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetRow + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetColumn);
+                    _returnString += GetName + " chooses seat number " + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetRow + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetColumn + Environment.NewLine;
                     //Add list of bought seats
                     boughtSeats.Add(tempSeats.ElementAt(indexSeat.ElementAt(i) - 1));
                 }
@@ -73,11 +73,14 @@ namespace CinemaSystem
                 //Calculate total price
                 _receipt.CalculateTotalPrice(boughtSeats);
                 //Get the full description of the receipt
-                Console.WriteLine(_receipt.GetFullDescription());
+                _returnString += _receipt.GetFullDescription();
+
+                _displayBoard.GetReceipts.Add(_receipt);
             } else
             {
-                Console.WriteLine(GetName + " didn't like any of the seats, so " + GetName + " went home.");
+                _returnString += GetName + " didn't like any of the seats, so " + GetName + " went home.";
             }
+            return _returnString;
         }
     }
 }
