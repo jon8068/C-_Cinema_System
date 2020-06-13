@@ -28,6 +28,7 @@ namespace CinemaGUI
                     label3.Text = displayBoard.GetTheaters.ElementAt(i).ShowSeats();
                 }
             }
+            textBox1.Text = "";
         }
         public void ShowSeat()
         {

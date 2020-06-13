@@ -57,7 +57,6 @@ namespace CinemaSystem
         {
              seat.ChangeStatus();    
         }
-
         public Movie Movie
         {
             get
@@ -97,12 +96,6 @@ namespace CinemaSystem
             {
                 return _seats;
             }
-        }
-
-        public string ShowDetails()
-        {
-            return "This is Theater " + this.GetName + Environment.NewLine +
-                "It will show the movie " + _movie.GetName + " at " + _time.Hours + " : " + _time.Minutes + Environment.NewLine;
         }
     }
 }

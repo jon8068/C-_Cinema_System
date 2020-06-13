@@ -38,22 +38,23 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.addTheaters1 = new CinemaGUI.AddTheaters();
+            this.label2 = new System.Windows.Forms.Label();
             this.viewTheaters1 = new CinemaGUI.ViewTheaters();
             this.createCustomers1 = new CinemaGUI.CreateCustomers();
             this.showTransactions1 = new CinemaGUI.ShowTransactions();
             this.showSeats1 = new CinemaGUI.ShowSeats();
             this.showMovies1 = new CinemaGUI.ShowMovies();
             this.addMovie1 = new CinemaGUI.AddMovie();
-            this.label2 = new System.Windows.Forms.Label();
+            this.addTheaters1 = new CinemaGUI.AddTheaters();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 45);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(240, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(301, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cinema System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -148,12 +149,15 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // addTheaters1
+            // label2
             // 
-            this.addTheaters1.Location = new System.Drawing.Point(26, 20);
-            this.addTheaters1.Name = "addTheaters1";
-            this.addTheaters1.Size = new System.Drawing.Size(745, 412);
-            this.addTheaters1.TabIndex = 14;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(324, 312);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Success Reset!";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // viewTheaters1
             // 
@@ -200,15 +204,12 @@
             this.addMovie1.Size = new System.Drawing.Size(691, 432);
             this.addMovie1.TabIndex = 16;
             // 
-            // label2
+            // addTheaters1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(324, 312);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 20);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Success Reset!";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.addTheaters1.Location = new System.Drawing.Point(26, 20);
+            this.addTheaters1.Name = "addTheaters1";
+            this.addTheaters1.Size = new System.Drawing.Size(745, 412);
+            this.addTheaters1.TabIndex = 14;
             // 
             // Form1
             // 

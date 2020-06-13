@@ -26,18 +26,6 @@ namespace CinemaSystem
         {
             _movieList.Add(m);
         }
-        public string ShowTheaters(Theater t)
-        {
-            return t.ShowDetails();
-        }
-        public void AddReceipts(Receipt r)
-        {
-            _receiptList.Add(r);
-        }
-        public string ShowReceipts(Receipt r)
-        {
-            return r.GetFullDescription();
-        }
         public List<Theater> GetTheaters
         {
             get
