@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddMovie.Designer.cs">
+      <DependentUpon>AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTheaters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddTheaters.Designer.cs">
+      <DependentUpon>AddTheaters.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateCustomers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     <Compile Include="ViewTheaters.Designer.cs">
       <DependentUpon>ViewTheaters.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddMovie.resx">
+      <DependentUpon>AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTheaters.resx">
+      <DependentUpon>AddTheaters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateCustomers.resx">
       <DependentUpon>CreateCustomers.cs</DependentUpon>
     </EmbeddedResource>

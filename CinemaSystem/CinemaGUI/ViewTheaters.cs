@@ -29,7 +29,7 @@ namespace CinemaGUI
             {
                 dataGridView1.Rows.Add();
                 dataGridView1.Rows[i].Cells[0].Value = theaterList.ElementAt(i).GetName;
-                dataGridView1.Rows[i].Cells[1].Value = theaterList.ElementAt(i).GetMovie.GetName;
+                dataGridView1.Rows[i].Cells[1].Value = theaterList.ElementAt(i).Movie.GetName;
                 dataGridView1.Rows[i].Cells[2].Value = theaterList.ElementAt(i).GetTime;
                 dataGridView1.Rows[i].Cells[3].Value = theaterList.ElementAt(i).IsFull;
             }

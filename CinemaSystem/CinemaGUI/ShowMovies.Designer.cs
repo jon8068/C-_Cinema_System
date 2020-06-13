@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.MovName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Starring = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,26 +54,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(718, 320);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(653, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "List of Movies";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MovName
             // 
@@ -103,6 +83,26 @@
             this.Description.Name = "Description";
             this.Description.Width = 150;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(653, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 48);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(364, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "List of Movies";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ShowMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "ShowMovies";
             this.Size = new System.Drawing.Size(846, 500);
+            this.Load += new System.EventHandler(this.ShowMovies_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

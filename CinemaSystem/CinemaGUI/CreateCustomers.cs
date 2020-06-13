@@ -109,6 +109,7 @@ namespace CinemaGUI
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
+            textBox2.Text = "";
             this.Parent.Show();
         }
 

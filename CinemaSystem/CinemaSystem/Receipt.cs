@@ -48,7 +48,7 @@ namespace CinemaSystem
             return Environment.NewLine +
             "Receipt: " + Environment.NewLine +
             "Name: " + _customer.GetName + Environment.NewLine +
-            "Movie: " + _theater.GetMovie.GetName + Environment.NewLine +
+            "Movie: " + _theater.Movie.GetName + Environment.NewLine +
             "Theater: " + _theater.GetName + Environment.NewLine +
             "Seats Booked: " + _seatNames + Environment.NewLine +
             "Total Price: $" + _totalPrice;
@@ -72,7 +72,7 @@ namespace CinemaSystem
         {
             get
             {
-                return _theater.GetMovie;
+                return _theater.Movie;
             }
         }
         public string GetSeatName

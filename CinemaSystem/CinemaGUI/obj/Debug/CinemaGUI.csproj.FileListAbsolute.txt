@@ -16,3 +16,5 @@ D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.Creat
 D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.ShowTransactions.resources
 D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.ShowMovies.resources
 D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.ShowSeats.resources
+D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.AddTheaters.resources
+D:\University\OOP\Final Project\CinemaSystem\CinemaGUI\obj\Debug\CinemaGUI.AddMovie.resources

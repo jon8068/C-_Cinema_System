@@ -23,15 +23,15 @@ namespace CinemaGUI
 
         }
 
-        public void ShowMovie(List<Theater> theaterList)
+        public void ShowMovie(List<Movie> movieList)
         {
-            for (int i = 0; i < theaterList.Count; i++)
+            for (int i = 0; i < movieList.Count; i++)
             {
                 dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[0].Value = theaterList.ElementAt(i).GetMovie.GetName;
-                dataGridView1.Rows[i].Cells[1].Value = theaterList.ElementAt(i).GetMovie.GetCategory.ToString();
-                dataGridView1.Rows[i].Cells[2].Value = theaterList.ElementAt(i).GetMovie.GetStarring.ToString();
-                dataGridView1.Rows[i].Cells[3].Value = theaterList.ElementAt(i).GetMovie.GetDesc;
+                dataGridView1.Rows[i].Cells[0].Value = movieList.ElementAt(i).GetName;
+                dataGridView1.Rows[i].Cells[1].Value = movieList.ElementAt(i).GetCategory.ToString();
+                dataGridView1.Rows[i].Cells[2].Value = movieList.ElementAt(i).GetStarring.ToString();
+                dataGridView1.Rows[i].Cells[3].Value = movieList.ElementAt(i).GetDesc;
             }
         }
 
@@ -45,6 +45,11 @@ namespace CinemaGUI
             this.Hide();
             dataGridView1.Rows.Clear();
             this.Parent.Show();
+        }
+
+        private void ShowMovies_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

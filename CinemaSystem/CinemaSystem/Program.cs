@@ -16,11 +16,11 @@ namespace CinemaSystem
             Theater theaterOne = new Theater("Orchid", theaterOneTime);
             Theater theaterTwo = new Theater("Rose", theaterTwoTime);
 
-            Movie movieOne = new Movie("Avengers Endgame", 3, "Superheroes in action",  "Chris Hemsworth"  , 1);
-            Movie movieTwo = new Movie("Birdbox", 1, "Don't make a sound",  "Sandra Bullock" , 2);
+            Movie movieOne = new Movie("Avengers Endgame", 3, "Superheroes in action",  "Chris Hemsworth");
+            Movie movieTwo = new Movie("Birdbox", 1, "Don't make a sound",  "Sandra Bullock");
 
-            theaterOne.AddMovie(movieOne);
-            theaterTwo.AddMovie(movieTwo);
+            theaterOne.Movie = movieOne;
+            theaterTwo.Movie = movieTwo;
 
             DisplayBoard displayBoardOne = new DisplayBoard();
             displayBoardOne.AddTheaters(theaterOne);

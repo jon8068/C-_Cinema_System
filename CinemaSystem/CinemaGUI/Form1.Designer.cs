@@ -35,13 +35,17 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.addTheaters1 = new CinemaGUI.AddTheaters();
             this.viewTheaters1 = new CinemaGUI.ViewTheaters();
             this.createCustomers1 = new CinemaGUI.CreateCustomers();
             this.showTransactions1 = new CinemaGUI.ShowTransactions();
             this.showSeats1 = new CinemaGUI.ShowSeats();
             this.showMovies1 = new CinemaGUI.ShowMovies();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.addMovie1 = new CinemaGUI.AddMovie();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -114,6 +118,43 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(80, 335);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(156, 81);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Add Theaters";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(537, 208);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(156, 81);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Add Movies";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(311, 335);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(156, 81);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Reset";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // addTheaters1
+            // 
+            this.addTheaters1.Location = new System.Drawing.Point(26, 20);
+            this.addTheaters1.Name = "addTheaters1";
+            this.addTheaters1.Size = new System.Drawing.Size(745, 412);
+            this.addTheaters1.TabIndex = 14;
+            // 
             // viewTheaters1
             // 
             this.viewTheaters1.Location = new System.Drawing.Point(26, 2);
@@ -139,9 +180,9 @@
             // 
             // showSeats1
             // 
-            this.showSeats1.Location = new System.Drawing.Point(61, 24);
+            this.showSeats1.Location = new System.Drawing.Point(26, 20);
             this.showSeats1.Name = "showSeats1";
-            this.showSeats1.Size = new System.Drawing.Size(689, 392);
+            this.showSeats1.Size = new System.Drawing.Size(762, 414);
             this.showSeats1.TabIndex = 11;
             // 
             // showMovies1
@@ -152,29 +193,30 @@
             this.showMovies1.TabIndex = 10;
             this.showMovies1.Load += new System.EventHandler(this.showMovies1_Load);
             // 
-            // button7
+            // addMovie1
             // 
-            this.button7.Location = new System.Drawing.Point(80, 335);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 81);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "Add Theaters";
-            this.button7.UseVisualStyleBackColor = true;
+            this.addMovie1.Location = new System.Drawing.Point(61, 12);
+            this.addMovie1.Name = "addMovie1";
+            this.addMovie1.Size = new System.Drawing.Size(691, 432);
+            this.addMovie1.TabIndex = 16;
             // 
-            // button8
+            // label2
             // 
-            this.button8.Location = new System.Drawing.Point(537, 208);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(156, 81);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Add Movies";
-            this.button8.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(324, 312);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Success Reset!";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -189,6 +231,8 @@
             this.Controls.Add(this.showTransactions1);
             this.Controls.Add(this.showSeats1);
             this.Controls.Add(this.showMovies1);
+            this.Controls.Add(this.addMovie1);
+            this.Controls.Add(this.addTheaters1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -213,6 +257,10 @@
         private ShowSeats showSeats1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private AddTheaters addTheaters1;
+        private System.Windows.Forms.Button button9;
+        private AddMovie addMovie1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

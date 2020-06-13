@@ -18,11 +18,6 @@ namespace CinemaSystem
             _time = time;
             GenerateSeats();
         }
-        public void AddMovie(Movie movie)
-        {
-            _movie = movie;
-
-        }
         public void GenerateSeats()
         {
             for(char i = 'A'; i <= 'D'; i++)
@@ -63,11 +58,15 @@ namespace CinemaSystem
              seat.ChangeStatus();    
         }
 
-        public Movie GetMovie
+        public Movie Movie
         {
             get
             {
                 return _movie;
+            }
+            set
+            {
+                _movie = value;
             }
         }
         public TimeSpan GetTime

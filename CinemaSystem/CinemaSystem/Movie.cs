@@ -22,7 +22,7 @@ namespace CinemaSystem
         private string _description;
         private string _starring;
         
-        public Movie(string name, int category, string description, string starring, int type) : base(name)
+        public Movie(string name, int category, string description, string starring) : base(name)
         {
             if(category == 1)
             {
