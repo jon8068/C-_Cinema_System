@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Customer Class (Abstract), will be the ones 
+    /// who are buying the tickets to the theater
+    /// </summary>
     public abstract class Customer : Thing
     {
         protected Receipt _receipt;
@@ -58,11 +62,9 @@ namespace CinemaSystem
             }
             else
             {
-                //How many tickets do you want to buy
                 randomTickets = random.Next(1, 17);
             }
 
-            //Randomized which seats you want to buy
             for (int i = 0; i < randomTickets; i++)
             {
                 int randomSeat;
@@ -76,7 +78,6 @@ namespace CinemaSystem
 
             for (int i = 0; i < indexSeat.Count; i++)
             {
-                //Booking the seat
                 if (tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetStatus)
                 {
                     continue;
@@ -85,20 +86,18 @@ namespace CinemaSystem
                 {
                     _displayBoard.GetTheaters.ElementAt(randomNumber - 1).BookSeats((tempSeats.ElementAt(indexSeat.ElementAt(i) - 1)));
                     _returnString += GetName + " chooses seat number " + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetRow + tempSeats.ElementAt(indexSeat.ElementAt(i) - 1).GetColumn + Environment.NewLine;
-                    //Add list of bought seats
                     boughtSeats.Add(tempSeats.ElementAt(indexSeat.ElementAt(i) - 1));
                 }
             }
 
             if (boughtSeats.Any())
             {
-                //Display bought seats
                 _displayBoard.GetTheaters.ElementAt(randomNumber - 1).ShowSeats();
 
                 _receipt = new Receipt(this, _displayBoard.GetTheaters.ElementAt(randomNumber - 1), boughtSeats);
-                //Calculate total price
+             
                 _receipt.CalculateTotalPrice(boughtSeats);
-                //Get the full description of the receipt
+             
                 _returnString += _receipt.GetFullDescription();
 
                 _displayBoard.GetReceipts.Add(_receipt);

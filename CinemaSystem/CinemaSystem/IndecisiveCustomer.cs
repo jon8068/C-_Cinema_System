@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Indecisive customer will have a random indecisive meter, if it is high enough, 
+    /// they will change their mind after choosing the movie and go home instead.
+    /// </summary>
     public class IndecisiveCustomer : Customer
     {
         private int _indecisiveMeter;
@@ -16,20 +20,14 @@ namespace CinemaSystem
         }
         public override string BuyTickets()
         {
-            //Getting the non booked seats
             List<Seat> tempSeats = new List<Seat>();
-            //List the bought seats by the customers for receipt
-            //Getting the theater number
             int theaterNumber = _displayBoard.GetTheaters.Count + 1;
 
             Random random = new Random();
             int randomNumber = random.Next(1, theaterNumber);
 
-
-            //Chooses the theater
             _returnString += GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetName + Environment.NewLine;
 
-            //Indecisiveness
             if (_indecisiveMeter < 5)
             {
                 _returnString += GetName + " changed his/her/their mind. " + GetName + " decided to go home ";

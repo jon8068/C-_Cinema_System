@@ -18,11 +18,6 @@ namespace CinemaGUI
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public void ShowTheaters(List<Theater> theaterList)
         {           
             for(int i =0; i < theaterList.Count; i++)
@@ -35,10 +30,6 @@ namespace CinemaGUI
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -50,6 +41,16 @@ namespace CinemaGUI
             this.Hide();
             dataGridView1.Rows.Clear();
             this.Parent.Show();
+        }
+
+        private void ViewTheaters_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

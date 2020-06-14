@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// DisplayBoard will display all of the lists, 
+    /// theaters, and movies in the GUI
+    /// </summary>
     public class DisplayBoard
     {
         private List<Theater> _theaterList;

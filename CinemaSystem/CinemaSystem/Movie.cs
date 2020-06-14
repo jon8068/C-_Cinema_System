@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
-
+    /// <summary>
+    /// Movie Class,  
+    /// the genre, description, and starring
+    /// Can have properties to get the description, starring, and category
+    /// </summary>
     public class Movie : Thing
     {
 

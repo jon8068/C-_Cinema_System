@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Celebrity Fan will try to 
+    /// watch the movie that stars their favorites.
+    /// </summary>
     public class CelebrityFan : Customer
     {
         private string _favorite;
@@ -35,21 +39,20 @@ namespace CinemaSystem
         }
         public override string BuyTickets()
         {
-            //Getting the non booked seats
             List<Seat> tempSeats = new List<Seat>();
-            //List the bought seats by the customers for receipt
+
             List<Seat> boughtSeats = new List<Seat>();
-            //Getting the theater number
+
             int theaterNumber = _displayBoard.GetTheaters.Count + 1;
 
             List<int> indexSeat = new List<int>();
 
             Random random = new Random();
+
             int randomNumber = CheckCelebs();
 
-            //Chooses the theater
             _returnString += GetName + " chooses theater " + _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetName + Environment.NewLine;
-            //Get Theater Seats
+
             tempSeats = _displayBoard.GetTheaters.ElementAt(randomNumber - 1).GetSeat;
 
             GetSeats(tempSeats, randomNumber);

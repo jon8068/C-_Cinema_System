@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Theater class, 
+    /// contains seats and a movie
+    /// </summary>
     public class Theater : Thing
     {
         private Movie _movie;

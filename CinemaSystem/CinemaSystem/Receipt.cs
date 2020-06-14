@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Receipt class, 
+    /// will be generated once the transaction is done
+    /// Returns a string that contains the customer name, the seats bought,
+    /// the theater name, total price, and seat names
+    /// </summary>
     public class Receipt
     {
         private Customer _customer;
