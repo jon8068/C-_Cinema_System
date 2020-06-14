@@ -31,6 +31,7 @@ namespace CinemaGUI
         {
             this.Hide();
             this.Parent.Show();
+            HideComponents();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -55,6 +56,7 @@ namespace CinemaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            HideComponents();
             bool addTheater = false;
             try
             {
@@ -62,8 +64,15 @@ namespace CinemaGUI
                 Movie m = new Movie(textBox1.Text, Convert.ToInt32(textBox2.Text), textBox4.Text, textBox3.Text);
                 if (Convert.ToInt32(textBox2.Text) <= 4 || Convert.ToInt32(textBox2.Text) > 0)
                 {
-                    displayBoard.AddMovies(m);
-                    addTheater = true;
+                    if (textBox1.Text.Trim().Equals("") || textBox2.Text.Trim().Equals("") || textBox3.Text.Trim().Equals("") || textBox4.Text.Trim().Equals(""))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        displayBoard.AddMovies(m);
+                        addTheater = true;
+                    }
                 }
             }
             catch

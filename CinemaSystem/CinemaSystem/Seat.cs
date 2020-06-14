@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CinemaSystem
 {
+    /// <summary>
+    /// Seats Class, can be booked for a movie
+    /// Contains row, column, price, and class
+    /// </summary>
     public class Seat
     {
 

@@ -17,10 +17,16 @@ namespace CinemaGUI
         public ShowSeats()
         {
             InitializeComponent();
+            HideLabels();
+        }
+        private void HideLabels()
+        {
+            label4.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label4.Hide();
             for (int i = 0; i < displayBoard.GetTheaters.Count; i++)
             {
                 if (displayBoard.GetTheaters.ElementAt(i).GetName.ToLower().Equals(textBox1.Text.ToLower()))
@@ -29,6 +35,11 @@ namespace CinemaGUI
                 }
             }
             textBox1.Text = "";
+
+            if (label3.Text.Equals(""))
+            {
+                label4.Show();
+            }
         }
         public void ShowSeat()
         {

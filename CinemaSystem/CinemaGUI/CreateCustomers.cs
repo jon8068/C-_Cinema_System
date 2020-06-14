@@ -32,10 +32,18 @@ namespace CinemaGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RegularCustomer customer = new RegularCustomer(textBox1.Text);
-            customer.DisplayBoard = displayBoard;
-            textBox2.Text = customer.BuyTickets();
-            CleanTextboxes();
+            HideElements();
+            if (textBox1.Text.Trim().Equals(""))
+            {
+                label6.Show();
+            }
+            else
+            {
+                RegularCustomer customer = new RegularCustomer(textBox1.Text);
+                customer.DisplayBoard = displayBoard;
+                textBox2.Text = customer.BuyTickets();
+                CleanTextboxes();
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -62,18 +70,34 @@ namespace CinemaGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Loner customer = new Loner(textBox1.Text);
-            customer.DisplayBoard = displayBoard;
-            textBox2.Text = customer.BuyTickets();
-            CleanTextboxes();
+            HideElements();
+            if (textBox1.Text.Trim().Equals(""))
+            {
+                label6.Show();
+            }
+            else
+            {
+                Loner customer = new Loner(textBox1.Text);
+                customer.DisplayBoard = displayBoard;
+                textBox2.Text = customer.BuyTickets();
+                CleanTextboxes();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            IndecisiveCustomer customer = new IndecisiveCustomer(textBox1.Text);
-            customer.DisplayBoard = displayBoard;
-            textBox2.Text = customer.BuyTickets();
-            CleanTextboxes();
+            HideElements();
+            if (textBox1.Text.Trim().Equals(""))
+            {
+                label6.Show();
+            }
+            else
+            {
+                IndecisiveCustomer customer = new IndecisiveCustomer(textBox1.Text);
+                customer.DisplayBoard = displayBoard;
+                textBox2.Text = customer.BuyTickets();
+                CleanTextboxes();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -90,6 +114,7 @@ namespace CinemaGUI
             textBox3.Hide();
             label5.Hide();
             button4.Show();
+            label6.Hide();
         }
         private void CleanTextboxes()
         {
@@ -120,11 +145,18 @@ namespace CinemaGUI
 
         private void button6_Click(object sender, EventArgs e)
         {
-            CelebrityFan customer = new CelebrityFan(textBox1.Text, textBox3.Text);
-            customer.DisplayBoard = displayBoard;
-            textBox2.Text = customer.BuyTickets();
-            CleanTextboxes();
             HideElements();
+            if (textBox1.Text.Trim().Equals("") || textBox3.Text.Trim().Equals(""))
+            {
+                label6.Show();
+            } else
+            {
+                CelebrityFan customer = new CelebrityFan(textBox1.Text, textBox3.Text);
+                customer.DisplayBoard = displayBoard;
+                textBox2.Text = customer.BuyTickets();
+                CleanTextboxes();
+                HideElements();
+            }
         }
     }
 }
